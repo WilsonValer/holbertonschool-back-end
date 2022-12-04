@@ -16,8 +16,9 @@ if __name__ == "__main__":
     for task in tasks:
         dict_task = {"task": task['title'],
                      "completed": task['completed'],
-                      "username": username}
+                     "username": username}
         listof_task.append(dict_task)
     datas = {str(id_user): listof_task}
-    with open("{}.json".format(id_user), 'w') as file:
+    filename = '{}.json'.format(id_user)
+    with open(filename, 'w') as file:
         json.dump(datas, file)
