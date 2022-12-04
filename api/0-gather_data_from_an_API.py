@@ -16,11 +16,6 @@ if __name__ == "__main__":
 
     url_tasks = get('https://jsonplaceholder.typicode.com/todos').json()
 
-
-#  print('URL: ', response.url)
-#  print('Status code: ', response.status_code)
-#  print('HTTP header: ', response.headers)
-
     for user in url_users:
         if user['id'] == id_employe:
             name_employe = user["name"]
