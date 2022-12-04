@@ -5,7 +5,7 @@ import json
 from sys import argv
 
 
-if __name__ == "__main__":
+def api_rest():
     """Write a Python script that, using this REST"""
     id_employe = int(argv[1])
     name_employe = ""
@@ -33,3 +33,7 @@ if __name__ == "__main__":
 
     for title in list_tasks:
         print(f'\t {title}')
+
+
+if __name__ == "__main__":
+    api_rest()
