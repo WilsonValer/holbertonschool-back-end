@@ -5,7 +5,7 @@ import json
 from sys import argv
 
 
-def get_api():
+def api_rest():
     ''' Gather data from an API '''
     id_user = int(argv[1])
     name_employe = ''
@@ -26,13 +26,13 @@ def get_api():
                 list_task.append(task['title'])
                 number_task += 1
             total_number_task += 1
-
-    print('Employee {} is done with tasks({}/{}):'.format(name_employe,
-                                                          number_task,
-                                                          total_number_task))
+    
+    out = f'Employee {name_employe} is done with \
+            tasks ({number_task}/{total_number_task}):'
+    print(out)
     for title in list_task:
         print('\t {}'.format(title))
 
 
 if __name__ == '__main__':
-    get_api()
+    api_rest()
