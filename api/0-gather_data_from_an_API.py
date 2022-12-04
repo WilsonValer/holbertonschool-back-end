@@ -33,7 +33,6 @@ def api_rest():
 
     salida = f'Employee {name_employe} is done with\
           tasks ({number_task}/{total_number_task}):'
-    print(salida)
 
     for title in list_tasks:
         print(f'\t {title}')
