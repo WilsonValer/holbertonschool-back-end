@@ -25,7 +25,6 @@ def api_rest():
                 list_task.append(task['title'])
                 number_task += 1
             total_number_task += 1
-    
     print('Employee {} is done with tasks({}/{}):'.format(name_employe,
                                                           number_task,
                                                           total_number_task))
