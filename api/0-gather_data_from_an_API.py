@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 ''' Return information about his/her TODO list progress from an REST API '''
 from requests import get
-import json
 from sys import argv
 
 
@@ -27,9 +26,9 @@ def api_rest():
                 number_task += 1
             total_number_task += 1
     
-    out = f'Employee {name_employe} is done with \
-            tasks ({number_task}/{total_number_task}):'
-    print(out)
+    print('Employee {} is done with tasks({}/{}):'.format(name_employe,
+                                                          number_task,
+                                                          total_number_task))
     for title in list_task:
         print('\t {}'.format(title))
 
