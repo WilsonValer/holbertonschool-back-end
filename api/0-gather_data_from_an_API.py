@@ -23,9 +23,10 @@ def api_rest():
 
     for task in url_tasks:
         if task['userId'] == id_employe:
-            list_tasks.append(task['title'])
-            number_task += 1
-        total_number_task += 1
+            if task['completed'] is True:
+                list_tasks.append(task['title'])
+                number_task += 1
+            total_number_task += 1
 
     salida = f'Employee {name_employe} is done with\
           tasks ({number_task}/{total_number_task}):'
