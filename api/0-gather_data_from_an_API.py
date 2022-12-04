@@ -6,6 +6,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
+    """Write a Python script that, using this REST"""
     id_employe = int(argv[1])
     name_employe = ""
     number_task = 0
