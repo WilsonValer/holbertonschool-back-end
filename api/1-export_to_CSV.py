@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """Write a Python script that, using this REST"""
-from requests import get
-import json
-from sys import argv
 import csv
+from requests import get
+from sys import argv
 
 
 if __name__ == "__main__":
