@@ -14,7 +14,7 @@ if __name__ == "__main__":
         username = user.get('username')
         tasks = get('{}todos?userId={}'.format(url, id_user)).json()
         dict_task = [{"username": username,
-                      "task": task['completed'],
+                      "task": task['title'],
                       "completed": task['completed']} for task in tasks]
         all_employed[id_user] = dict_task
     filename = 'todo_all_employees.json'
