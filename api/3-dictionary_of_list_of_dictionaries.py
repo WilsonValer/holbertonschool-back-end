@@ -11,7 +11,7 @@ if __name__ == "__main__":
     all_employed = {}
     for user in users:
         id_user = user.get('id')
-        username = user.get('id')
+        username = user.get('username')
         tasks = get('{}todos?userId={}'.format(url, id_user)).json()
         dict_task = [{"username": username,
                       "task": task['completed'],
